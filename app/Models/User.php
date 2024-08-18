@@ -51,4 +51,9 @@ class User extends Authenticatable
         return $this->hasMany(Pedidos::class);
     }
 
+    public function enderecos()
+    {
+        return $this->hasMany(EnderecosCliente::class);
+    }
+
 }

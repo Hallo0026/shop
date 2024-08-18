@@ -41,9 +41,16 @@ class Pedidos extends Model
         'data_recebido_devolucao',
     ];
 
+    protected $table = 'pedidos';
+
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function itens()
+    {
+        return $this->hasMany(ItensPedido::class);
     }
 
 }

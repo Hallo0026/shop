@@ -25,9 +25,6 @@ return new class extends Migration
             $table->string('estado_entrega');
             $table->string('telefone_contato');
             $table->string('nome_recebedor');
-            $table->string('cpf_recebedor');
-            $table->string('cnpj_recebedor');
-            $table->string('email_recebedor');
             $table->string('comprovante')->nullable();
             $table->string('rastreio')->nullable();            
             $table->string('observacoes')->nullable();            

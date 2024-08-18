@@ -17,8 +17,8 @@ return new class extends Migration
             $table->foreignId('produto_id')->constrained('produtos');
             $table->integer('quantidade');
             $table->decimal('valor_unitario', 10, 2);
-            $table->decimal('valor_desconto', 10, 2);
-            $table->decimal('porcentagem_desconto', 10, 2);
+            $table->decimal('valor_desconto', 10, 2)->nullable();
+            $table->decimal('porcentagem_desconto', 10, 2)->nullable();
             $table->decimal('valor_total', 10, 2);
             $table->string('observacoes')->nullable();
             $table->timestamps();

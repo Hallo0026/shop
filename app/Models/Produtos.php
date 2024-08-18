@@ -21,6 +21,8 @@ class Produtos extends Model
         'ativo'
     ];
 
+    protected $table = 'produtos';
+
     public function categoria()
     {
         return $this->belongsTo(Categorias::class);

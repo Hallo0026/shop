@@ -16,10 +16,10 @@ return new class extends Migration
             $table->string('codigo_interno')->unique();
             $table->string('codigo_barras')->unique();
             $table->string('nome');
-            $table->text('descricao');
-            $table->decimal('preco', 10, 2);
-            $table->integer('quantidade_estoque');
-            $table->foreignId('categoria_id')->constrained('categorias');
+            $table->text('descricao')->nullable();
+            $table->string('slug')->nullable();
+            $table->decimal('valor_unitario', 10, 2);
+            $table->foreignId('categoria_id')->constrained('categorias')->nullable();
             $table->string('imagem')->nullable();
             $table->boolean('ativo')->default(true);
             $table->timestamps();
